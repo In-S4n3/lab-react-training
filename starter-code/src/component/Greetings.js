@@ -12,7 +12,7 @@ function Greetings(props) {
     default:
       hello = 'Olá';
   }
-  return <div>{hello} {props.children}</div>;
+  return <div style={{ border: "1px solid black", margin: "10px", padding:"5px"}}>{hello} {props.children}</div>;
 }
 
 export default Greetings;

@@ -2,20 +2,20 @@ import React from 'react'
 
 function CreditCard(props) {
   return (
-    <div>
-      <div className="" style={{ backgroundColor: props.bgColor, color: props.color }}>
+    <div style={{border: "1px solid black", borderRadius:"15px", backgroundColor: props.bgColor}}>
+      <div className="" style={{ color: props.color, padding:"5px 55px", float:"right"}}>
         {props.type}
       </div>
-      <div className="" style={{ backgroundColor: props.bgColor, color: props.color }}>
+      <div className="" style={{ color: props.color , padding:"5px 55px "}}>
         {props.number}
       </div>
-      <div className="" style={{ backgroundColor: props.bgColor, color: props.color }}>
+      <div className="" style={{ color: props.color , padding:"5px 55px ", display:"inline", float:"left"}}>
         {props.expirationMonth}/{props.expirationYear}
       </div>
-      <div className="" style={{ backgroundColor: props.bgColor, color: props.color }}>
+      <div className="" style={{ color: props.color , padding:"5px 55px ",  display:"inline", float:"left"}}>
         {props.bank}
       </div>
-      <div className="" style={{ backgroundColor: props.bgColor, color: props.color }}>
+      <div className="" style={{ color: props.color , padding:"5px 55px "}}>
         {props.owner}
       </div>
     </div>

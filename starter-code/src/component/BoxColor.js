@@ -16,9 +16,9 @@ function BoxColor(props) {
 
   return (
     <div>
-      <div style={{ backgroundColor: `rgb(${props.r},${props.g},${props.b})` }}>
+      <div style={{ backgroundColor: `rgb(${props.r},${props.g},${props.b})`, border: "1px solid black", padding: "10px", margin:"10px", textAlign: "center" }}>
         rgb({props.r}, {props.g}, {props.b})
-        <div>
+        <div style={{textAlign: "center"}}>
           {rgbToHex(
             parseInt(props.r, 10),
             parseInt(props.g, 10),

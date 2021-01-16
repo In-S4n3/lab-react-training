@@ -5,6 +5,7 @@ import Random from "./component/Random";
 import BoxColor from "./component/BoxColor";
 import CreditCard from "./component/CreditCard";
 import "bootstrap/dist/css/bootstrap.css";
+import Rating from './component/Rating';
 
 class App extends Component {
   render() {
@@ -75,14 +76,20 @@ class App extends Component {
                 number="0123456789016984"
                 expirationMonth={12}
                 expirationYear={2019}
-                bank="Name of the Bank"
-                owner="Firstname Lastname"
+                bank="Santander"
+                owner="Tiago Pereira"
                 bgColor="#ddbb55"
                 color="white"
               />
             </div>
           </div>
         </div>
+        <Rating>0</Rating>
+        <Rating>1.49</Rating>
+        <Rating>1.5</Rating>
+        <Rating>3</Rating>
+        <Rating>4</Rating>
+        <Rating>5</Rating>
       </div>
     );
   }
