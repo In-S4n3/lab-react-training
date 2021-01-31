@@ -3,37 +3,32 @@ import React from "react";
 function Rating(props) {
   //console.log(props.children);
   let num = Math.round(props.children);
-  
 
-  let source = "";
+  let star = "";
   switch (num) {
     case 0:
-      source = "/img/empty-stars.png";
+      star = "☆☆☆☆☆";
       break;
     case 1:
-      source = "/img/one-stars.png";
+      star = "★☆☆☆☆";
       break;
     case 2:
-      source = "/img/two-stars.png";
+      star = "★★☆☆☆";
       break;
     case 3:
-      source = "/img/three-stars.png";
+      star = "★★★☆☆";
       break;
     case 4:
-      source = "/img/four-stars.png";
+      star = "★★★★☆";
       break;
     case 5:
-      source = "/img/five-stars.png";
+      star = "★★★★★";
       break;
     default:
       break;
   }
 
-  return (
-    <div>
-      <img src={source} alt="dice" />
-    </div>
-  );
+  return <div>{star}</div>;
 }
 
 export default Rating;

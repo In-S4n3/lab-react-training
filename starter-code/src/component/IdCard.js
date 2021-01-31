@@ -18,7 +18,7 @@ function IdCard(props) {
           <b>Height:</b> {props.height}cm
         </div>
         <div>
-          <b>Birth:</b> {props.birth.toString()}
+          <b>Birth:</b> {props.birth}
         </div>
       </div>
     </div>

@@ -4,21 +4,27 @@ import Greetings from "./component/Greetings";
 import Random from "./component/Random";
 import BoxColor from "./component/BoxColor";
 import CreditCard from "./component/CreditCard";
-import "bootstrap/dist/css/bootstrap.css";
-import Rating from './component/Rating';
+import Rating from "./component/Rating";
+import DriverCard from "./component/DriverCard";
+import LikeButton from "./component/LikeButton";
+import ClickablePicture from "./component/ClickablePicture";
+import Dice from "./component/Dice";
+import NumbersTable from "./component/NumbersTable";
+import FaceBook from "./component/FaceBook";
+import profiles from "./data/berlin.json";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <h1>IdCard</h1>
-
         <IdCard
           lastName="Doe"
           firstName="John"
           gender="male"
           height={178}
-          birth={new Date("1992-07-14")}
+          birth={new Date("1992-07-14").toString()}
           picture="https://randomuser.me/api/portraits/men/44.jpg"
         />
         <br />
@@ -27,21 +33,18 @@ class App extends Component {
           firstName="Obrien"
           gender="female"
           height={172}
-          birth={new Date("1988-05-11")}
+          birth={new Date("1988-05-11").toString()}
           picture="https://randomuser.me/api/portraits/women/44.jpg"
         />
         <h1>Greetings</h1>
         <Greetings lang="de">Ludwig</Greetings>
         <Greetings lang="fr">François</Greetings>
-
         <h1>Random</h1>
         <Random min={1} max={6} />
         <Random min={1} max={100} />
-
         <h1>BoxColor</h1>
         <BoxColor r={255} g={0} b={0} />
         <BoxColor r={128} g={255} b={0} />
-
         <h1>CreditCard</h1>
         <div className="container">
           <div className="row">
@@ -84,12 +87,45 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <h1>Ratings</h1>
         <Rating>0</Rating>
         <Rating>1.49</Rating>
         <Rating>1.5</Rating>
         <Rating>3</Rating>
         <Rating>4</Rating>
         <Rating>5</Rating>
+        <h1>Driver Card</h1>
+        <DriverCard
+          name="Travis Kalanick"
+          rating={4.2}
+          img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+          car={{
+            model: "Toyota Corolla Altis",
+            licensePlate: "CO42DE",
+          }}
+        />
+        <DriverCard
+          name="Dara Khosrowshahi"
+          rating={4.9}
+          img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+          car={{
+            model: "Audi A3",
+            licensePlate: "BE33ER",
+          }}
+        />
+        <h1>Like Button</h1>
+        <LikeButton /> <LikeButton />
+        <h1>ClickablePicture</h1>
+        <ClickablePicture
+          img="/img/persons/maxence.png"
+          imgClicked="/img/persons/maxence-glasses.png"
+        />
+        <h1>Dice</h1>
+        <Dice />
+        <h1>NumbersTable</h1>
+        <NumbersTable limit={24} />
+        <h1>Facebook</h1>
+        <FaceBook profiles={profiles} />
       </div>
     );
   }
